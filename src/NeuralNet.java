@@ -12,6 +12,12 @@ public class NeuralNet {
 	private NVector<NeuronLayer> vectorLayers;
 
 	public NeuralNet() {
+		
+	}
+	
+	public NeuralNet(Double bias, Double activation) {
+		this.bias = bias;
+		this.activationResponse = activation;
 
 	}
 
