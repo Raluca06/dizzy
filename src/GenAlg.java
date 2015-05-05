@@ -1,5 +1,5 @@
 
-public class GenAlg {
+public abstract class GenAlg {
     
     /**
      * this holds the entire population of chromosomes
@@ -58,40 +58,42 @@ public class GenAlg {
      */
     private int generationCounter;
 
-	  void Crossover(const vector<double> &mum,
-
-	                 const vector<double> &dad,
-
-	                 vector<double>       &baby1,
-
-	                 vector<double>       &baby2);
+    public void crossover(NVector<Double> mum, NVector<Double> dad, NVector<Double> baby1, NVector<Double> baby2){
+    	
+    }
 
 	 
 
-	  void Mutate(vector<double> &chromo);
+    public void mutate(NVector<Double> chromo){
+    	
+    }
+
+    private Genome getChromoRoulette(){
+    	return null;
+    }
 
 	 
 
-	  Genome getChromoRoulette();
+	 public void GrabNBest(int NBest, final int NumCopies, NVector<Genome> vecPop){
+		  
+	  }
 
-	 
+	 public void calculateBestWorstAvTot(){
+		 
+	 }
 
-	  void GrabNBest(int NBest, const int NumCopies,
+	public void reset(){
+		
+	}
 
-	                 vector<SGenome> &vecPop);
-
-	 
-
-	void CalculateBestWorstAvTot();
-
-	 
-
-	public void Reset();
-
-	public GenAlg(int popsize, double mutRat, double CrossRat, int numweights);
+	public void genAlg(int popsize, double mutRat, double CrossRat, int numweights){
+		
+	}
 
 	  //this runs the GA for one generation.
-	  public NVector<Genome> Epoch(NVector<Genome> old_pop);
+	  public NVector<Genome> getEpoch(NVector<Genome> old_pop){
+		  return null;
+	  }
 
 	  public NVector<Genome> getChromos(){
 	      return this.vecPop;
